@@ -1,0 +1,14 @@
+digraph {
+    "phpactor" [xlabel="Application"]
+    "container" [xlabel="Library"]
+    "worse-reflection" [xlabel="Library"]
+    "completion" [xlabel="Library"]
+    "completion-worse-reflection" [xlabel="Adapter"]
+
+    "phpactor" -> "completion"
+    "phpactor" -> "completion-worse-reflection"
+    "phpactor" -> "container"
+    "completion-worse-reflection" -> "completion"
+    "completion-worse-reflection" -> "worse-reflection"
+}
+

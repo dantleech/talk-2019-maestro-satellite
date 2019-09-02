@@ -1,0 +1,35 @@
+digraph {
+    "phpactor"
+    "container"
+    "completion"
+    "completion-extension" [xlabel="Extension"]
+    "console-extension" [xlabel="Extension"]
+    "rpc-extension" [xlabel="Extension"]
+    "completion-rpc-extension" [xlabel="Extension"]
+    "completion-worse-reflection" [xlabel="Extension"]
+    "completion-worse-reflection-extension" [xlabel="Extension"]
+    "worse-reflection"
+    "rpc"
+    "completion"
+    "completion-worse-reflection"
+
+    "phpactor" -> "completion-rpc-extension"
+    "rpc-extension" -> "rpc"
+    "rpc-extension" -> "container"
+    "rpc-extension" -> "console-extension"
+    "phpactor" -> "rpc-extension"
+    "completion-rpc-extension" -> "rpc-extension"
+    "completion-extension" -> "completion"
+    "completion-extension" -> "container"
+    "phpactor" -> "completion-worse-reflection-extension"
+    "completion-rpc-extension" -> "completion-extension"
+    "completion-rpc-extension" -> "completion"
+    "completion-rpc-extension" -> "rpc"
+    "completion-rpc-extension" -> "container"
+    "completion-worse-reflection" -> "completion"
+    "completion-worse-reflection" -> "worse-reflection"
+    "completion-worse-reflection-extension" -> "completion-extension"
+    "completion-worse-reflection-extension" -> "completion-worse-reflection"
+    "completion-worse-reflection-extension" -> "container"
+}
+

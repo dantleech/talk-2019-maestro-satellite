@@ -1,0 +1,9 @@
+digraph {
+    phpactor
+    "container"
+    "worse-reflection"
+
+    phpactor -> "worse-reflection"
+    phpactor -> "container"
+}
+
